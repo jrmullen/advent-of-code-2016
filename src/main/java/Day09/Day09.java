@@ -13,14 +13,14 @@ public class Day09 {
     public static void main(String[] args) throws FileNotFoundException {
 
         String compressed = "";
-//        Scanner scanner = new Scanner(new File("src\\main\\java\\Day09\\input9.txt"));
-        Scanner scanner = new Scanner(new File("src/main/java/Day09/input9.txt")); //remove
+        Scanner scanner = new Scanner(new File("src\\main\\java\\Day09\\input9.txt"));
         while (scanner.hasNext()) {
             compressed += scanner.next();
         }
 
         System.out.println(compressed); //remove
 
+        String decompressedString = "";
         int repeatStringLength = 0;
         int repeatNumber = 0;
 
@@ -34,12 +34,12 @@ public class Day09 {
                 while (!bool) {
                     if (compressed.charAt(tempInt) == 'x') {
                         bool = true;
-                    } else if(compressed.charAt(tempInt) != '(') {
+                    } else if (compressed.charAt(tempInt) != '(') {
                         tempStr += compressed.charAt(tempInt);
                     }
                     tempInt++;
                 }
-                repeatStringLength = Iteger;
+//                repeatStringLength = Iteger;
 
                 tempStr = "";
                 tempInt = 0;
@@ -64,8 +64,6 @@ public class Day09 {
 
             System.out.println("String length " + repeatStringLength + " repeat " + repeatNumber);
         }
-
-
 
 
     }
